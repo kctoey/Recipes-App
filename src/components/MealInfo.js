@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
 import { Link } from "react-router-dom";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LineShareButton,
+  LineIcon,
+} from "react-share";
+
 const MealInfo = () => {
   var id = "";
   const [item, setItem] = useState("");
@@ -13,6 +22,7 @@ const MealInfo = () => {
         setItem(data.meals[0]);
       });
   }
+  const shareUrl = `https://meal-app.pages.dev/mealInfo/${mealID}`;
   return (
     <div className="p-4 flex justify-center bg-gradient-to-r from-sky-500 to-indigo-500 min-h-screen">
       {!item ? (
@@ -85,6 +95,30 @@ const MealInfo = () => {
               </h2>
               <h4 className="leading-8 indent-8">{item.strInstructions}</h4>
             </div>
+          </div>
+
+          <div>
+            <FacebookShareButton
+              url={shareUrl}
+              quote={"Dummy text!"}
+              hashtag="#myfavmeal"
+            >
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <TwitterShareButton
+              url={shareUrl}
+              quote={"Dummy text!"}
+              hashtag="#myfavmeal"
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <LineShareButton
+              url={shareUrl}
+              quote={"Dummy text!"}
+              hashtag="#myfavmeal"
+            >
+              <LineIcon size={32} round />
+            </LineShareButton>
           </div>
         </div>
       )}

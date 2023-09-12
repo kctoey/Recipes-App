@@ -49,17 +49,17 @@ const Navbar = () => {
           ) : (
             <ul className=" flex flex-cols justify-center invisible md:visible space-x-4 font-bold text-xl">
               <Link to="/">
-                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:translate-y-1 duration-150 border-white">
+                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:-translate-y-1 duration-150 border-white">
                   Home
                 </li>
               </Link>
               <Link to="/categories">
-                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:translate-y-1 duration-150 border-white">
+                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:-translate-y-1 duration-150 border-white">
                   Categories
                 </li>
               </Link>
               <Link to="/random">
-                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:translate-y-1 duration-150 border-white">
+                <li className="px-4 hover:border-b-sky-500 border-2 hover:text-sky-500 hover:-translate-y-1 duration-150 border-white">
                   Random
                 </li>
               </Link>

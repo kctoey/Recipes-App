@@ -20,7 +20,7 @@ const Homepage = () => {
         <div className="flex justify-center p-5 rounded-xl">
           <div className="flex justify-center p-4 w-full text-center">
             <input
-              className="   text-base bg-white rounded-xl border-2 focus:outline-none"
+              className=" px-8   text-base bg-white rounded-xl border-2 focus:outline-none"
               type="text"
               placeholder="Plese fill menu"
               value={searchTerm}
@@ -29,9 +29,9 @@ const Homepage = () => {
               maxLength="20"
             ></input>
 
-            <div className="group hover:border-indigo-500  border-4   transition duration-150 ease-out md:ease-in mx-4 py-1 text-white rounded-full bg-white">
+            <div className="group hover:border-indigo-500  border-4   transition duration-150 ease-out md:ease-in mx-4  py-1 text-white rounded-full bg-white">
               <button
-                className="px-4 group-hover:border-indigo-500 "
+                className="px-4 group-hover:border-indigo-500 pt-4 sm:pt-0"
                 onClick={fetchMealsHandler}
               >
                 <BsSearch color="indigo" />
@@ -47,7 +47,7 @@ const Homepage = () => {
                   <Link to={`/mealInfo/${meal.idMeal}`}>
                     <div
                       className="md:flex max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden 
-                   hover:shadow-xl hover:translate-y-2 transition delay-150"
+                   hover:shadow-xl hover:-translate-y-2 transition delay-150 "
                     >
                       <div className="md:shrink-0">
                         <LazyLoad offsetHorizontal={50}>
@@ -74,7 +74,7 @@ const Homepage = () => {
             })
           ) : (
             <h2 className="mx-auto w-screen font-bold text-3xl text-center text-white">
-              No Meals
+              The meal you are looking for could not be found. Please try again.
             </h2>
           )}
         </div>
